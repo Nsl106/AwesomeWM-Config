@@ -70,6 +70,21 @@ local clientkeys = {
         c:raise()
     end, {description = "toggle fullscreen", group = "client"}),
 
+    -- Modkey + shift + f toggles fullscreen
+    awful.key({modkey, "Shift"}, "f", function(c)
+        c.floating = not c.floating
+    end, {description = "toggle floating", group = "client"}),
+
+    -- Modkey + shift + s toggles sticky
+    awful.key({modkey, "Shift"}, "s", function(c)
+        c.sticky = not c.sticky
+    end, {description = "toggle sticky", group = "client"}),
+
+    -- Modkey + shift + o toggles ontop
+    awful.key({modkey, "Shift"}, "o", function(c)
+        c.ontop = not c.ontop
+    end, {description = "toggle ontop", group = "client"}),
+
     -- Modkey + shift + c closes a client window
     awful.key({modkey, "Shift"}, "c", function(c) c:kill() end,
               {description = "close", group = "client"}),
