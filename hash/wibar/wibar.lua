@@ -8,7 +8,7 @@ local get_wibar = function(s)
     local names = {"1", "2", "3", "4", "5", "6"}
     local l = awful.layout.suit
     local layouts = {
-        l.floating, l.magnifier, l.fair.horizontal, l.tile, l.magnifier, l.max
+        l.fair, l.magnifier, l.fair.horizontal, l.tile, l.fair, l.max
     }
     awful.tag(names, s, layouts)
 
