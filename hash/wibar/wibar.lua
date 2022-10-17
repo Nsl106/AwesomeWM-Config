@@ -20,7 +20,7 @@ local get_wibar = function(s)
     -- Margin between the bottom of the wiboxes and the top of a window
     local marginBottom = 5
     -- Height of the wiboxes
-    local height = 25
+    local wibox_height = 25
 
     -- Width of the left sidebar, not including margins
     local leftWidth = 125
@@ -41,7 +41,7 @@ local get_wibar = function(s)
             screen = s,
             stretch = false,
             width = arg.width,
-            height = height,
+            height = wibox_height,
             shape = custom_shape,
             visible = true,
             x = arg.position,
@@ -61,7 +61,7 @@ local get_wibar = function(s)
     })
 
     local function addWiboxStruts(wibox)
-        wibox:struts({top = height + margin + marginBottom})
+        wibox:struts({top = wibox_height + margin + marginBottom})
     end
 
     addWiboxStruts(s.wiboxLeft)
