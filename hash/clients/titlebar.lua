@@ -36,13 +36,6 @@ local function get_titlebar(c)
     titlebar_menu:add(sticky, 2)
     titlebar_menu:add(ontop, 3)
 
-    -- Gets a rounded rectangle shape
-    local function custom_shape(cr, width, height)
-        gears.shape.rounded_rect(cr, width, height, 4)
-    end
-
-    c.shape = custom_shape
-
     -- buttons for the titlebar
     local buttons = gears.table.join(awful.button({}, 1, function()
         c:emit_signal("request::activate", "titlebar", {raise = true})

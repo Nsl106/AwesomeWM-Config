@@ -18,7 +18,10 @@ end)
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars",
     function(c)
-        require("hash.titlebar") (c)
+        require("hash.clients.shape") (c)
+        if (beautiful.titlebars_enabled) then
+            require("hash.clients.titlebar") (c)
+        end
     end)
 
 -- Enable sloppy focus, so that focus follows mouse.

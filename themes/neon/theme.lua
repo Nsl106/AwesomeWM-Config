@@ -12,6 +12,8 @@ local themes_path = string.format("%s/.config/awesome/themes/", os.getenv("HOME"
 
 local theme = {}
 
+theme.titlebars_enabled = false
+
 theme.font          = "sans 8"
 theme.bold_font       = "sans 12 bold"
 theme.taglist_font   = "sans 8"
